@@ -9,11 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func showMessage(){
+        print("you pressed Hello World button")
+
+        func cgangeBackgroundColor() -> UIColor {
+            let arrayColor = [UIColor.red, UIColor.gray, UIColor.yellow, UIColor.green, UIColor.blue, UIColor.brown, UIColor.orange, UIColor.purple, UIColor.systemIndigo, UIColor.white]
+            return  arrayColor.randomElement() ?? UIColor.white
+        }
+        view.backgroundColor  = cgangeBackgroundColor()
     }
-
-
 }
-
